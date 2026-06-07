@@ -1,0 +1,6 @@
+FROM node:16
+COPY productOrderProcessorMicroservice/implementation/package*.json /src/
+WORKDIR /src
+RUN npm install
+COPY productOrderProcessorMicroservice/implementation ./
+CMD ["node", "index.js"]

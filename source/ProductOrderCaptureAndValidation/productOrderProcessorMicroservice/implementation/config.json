@@ -1,0 +1,5 @@
+{
+  "poll_interval_ms": 5000,
+  "processing_time_ms": 10000,
+  "collection_name": "productorder"
+}
