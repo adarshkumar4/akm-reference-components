@@ -50,7 +50,8 @@ const pendingOrdersGauge = new client.Gauge({
   async collect() {
     if (db) {
       try {
-        const count = await db.collection('productorder').countDocuments({ state: 'acknowledged' });
+        const count = await db.collection('ProductOrder').countDocuments({ state: 'acknowledged' });
+        console.log("Pending orders:", count);
         this.set(count);
       } catch (error) {
         console.error('Error querying pending orders:', error);
